@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <script src="./index.js"></script>
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex flex-col items-center h-auto bg-slate-400 py-8 ">
+      <!-- Form Section -->
+      <div class="bg-white rounded-lg w-full max-w-md mb-8">
+          <form class="px-12 py-6 space-y-6">
+              <input
+                  type="text"
+                  id="fname"
+                  class="bg-gray-200 py-2 px-4 rounded-lg w-full"
+                  placeholder="Full Name"
+              />
+              <input
+                  type="email"
+                  id="email"
+                  class="bg-gray-200 py-2 px-4 rounded-lg w-full"
+                  placeholder="Email Address"
+              />
+              <input
+                  type="phone"
+                  id="phone"
+                  class="bg-gray-200 py-2 px-4 rounded-lg w-full"
+                  placeholder="Phone Number"
+              />
+              <input
+                  type="address"
+                  id="houseaddress"
+                  class="bg-gray-200 py-2 px-4 rounded-lg w-full"
+                  placeholder="Home Address"
+              />
+              <!-- Add Data Button -->
+              <div class="flex justify-center space-x-4">
+              <button type="button" id="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md w-40" onclick="add()">
+                  Add
+              </button>
+              <!-- Update Button -->
+              <button type="button" id="update" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md w-40 hidden" onclick="updateEmployee()">
+                  Update
+              </button>
+              </div>
+          </form>
+      </div>
+
+      <!-- Table Section -->
+      <div class="w-full lg:w-3/4 md:w-3/4 sm:w-full bg-white rounded-lg shadow-lg p-4">
+          <table class="min-w-full divide-y divide-gray-200 ">
+              <thead class="bg-gray-100">
+                  <tr>
+                      <th class="px-1 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          ID
+                      </th>
+                      <th class="px-1 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Name
+                      </th>
+                      <th class="px-1 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Email Address
+                      </th>
+                      <th class="px-1 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Phone No
+                      </th>
+                      <th class="px-1 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Address
+                      </th>
+                      <th class="px-1 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Action
+                      </th>
+                  </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200 ml-6" id="table-body">
+                  <!-- Table rows will be dynamically generated here -->
+              </tbody>
+          </table>
+      </div>
+  </div>
+</body>
+</html>
